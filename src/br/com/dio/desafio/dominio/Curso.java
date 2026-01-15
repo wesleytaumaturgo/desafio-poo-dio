@@ -18,6 +18,9 @@ public class Curso extends Conteudo{
     }
 
     public void setCargaHoraria(int cargaHoraria) {
+        if (cargaHoraria <= 0) {
+            throw new IllegalArgumentException("Carga horaria deve ser maior que zero");
+        }
         this.cargaHoraria = cargaHoraria;
     }
 
